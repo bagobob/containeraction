@@ -1,9 +1,10 @@
 on: [push]
-  jobs:
-    memory_retrieve_job:
-      runs-on: ubuntu-latest
-      name: Retrieve memory info
-      steps:
+  
+jobs:
+  memory_retrieve_job:
+    runs-on: ubuntu-latest
+    name: Retrieve memory info
+    steps:
         - name: Hello action step
           id: hello
           uses: ./
