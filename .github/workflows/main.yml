@@ -5,10 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Retrieve memory info
     steps:
-        - name: Hello action step
-          id: hello
-          uses: ./
-          with:
-            who-to-greet: 'Boris Tibago'
-        - name: Get The output memory info
-          run: echo "The memory info is ${{ steps.hello.output.memory }}"
+      - uses: actions/checkout@v2
+      - name: run action step
+        id: hello
+        uses: ./
+        with:
+          myInput: 'Boris Tibago'
+      - name: outpu
+        run: echo "The  total memory info is ${{ steps.hello.outputs.memory }}"

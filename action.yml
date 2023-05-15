@@ -1,15 +1,15 @@
 name: 'Retrieve memory info'
 description: 'Retrieve the memory infos from the OS'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  myInput:  # id of input
+    description: 'Greeting man'
     required: true
-    default: 'World'
+    default: 'Awesome lab'
 outputs:
-  memory: # id of output
-    description: 'The memory info we wanted'
+  myOutput: # id of output
+    description: 'The total memory'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.myInput }}
