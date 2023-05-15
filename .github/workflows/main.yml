@@ -1,0 +1,13 @@
+on: [push]
+  jobs:
+    memory_retrieve_job:
+      runs-on: ubuntu-latest
+      name: Retrieve memory info
+      steps:
+        - name: Hello action step
+          id: hello
+          uses: ./
+          with:
+            who-to-greet: 'Boris Tibago'
+        - name: Get The output memory info
+          run: echo "The memory info is ${{ steps.hello.output.memory }}"
